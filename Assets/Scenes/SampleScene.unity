@@ -419,7 +419,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 672f864e9186244ac9b4dd89e15264f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerTransform: {fileID: 384277025}
   _playerRigidBody: {fileID: 384277021}
 --- !u!4 &417627338
 Transform:
@@ -1127,6 +1126,8 @@ MonoBehaviour:
   CoinPrefab: {fileID: 2799647883850777977, guid: 868ea615bc1bd479fb14c665de650683, type: 3}
   CoinsList: []
   _coinsText: {fileID: 635111054}
+  _coinsCount: 2
+  _fieldSize: 5
 --- !u!4 &1649175973
 Transform:
   m_ObjectHideFlags: 0
