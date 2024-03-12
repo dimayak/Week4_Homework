@@ -7,13 +7,16 @@ public class CoinManager : MonoBehaviour
     public GameObject CoinPrefab;
     public List<Coin> CoinsList = new();
     [SerializeField] private TextMeshProUGUI _coinsText;
+    [SerializeField] private int _coinsCount = 10;
+    [Tooltip("Монеты генерируются в квадрате (-fieldSize, fieldSize)")]
+    [SerializeField] private float _fieldSize = 10.0f;
 
     void Start()
     {
-        for (int i = 0; i < 50; ++i)
+        for (int i = 0; i < _coinsCount; ++i)
         {
-            Vector3 position = new Vector3(Random.Range(-20.0f, 20.0f), 0.5f, Random.Range(-20.0f, 20.0f));
-            var newCoin = Instantiate(CoinPrefab, position, Quaternion.identity);
+            Vector3 position = new Vector3(Random.Range(-_fieldSize, _fieldSize), 0.5f, Random.Range(-_fieldSize, _fieldSize));
+            GameObject newCoin = Instantiate(CoinPrefab, position, Quaternion.identity);
             CoinsList.Add(newCoin.GetComponent<Coin>());
         }
 
